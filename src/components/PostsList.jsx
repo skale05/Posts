@@ -1,10 +1,12 @@
-import React from 'react'
+import PostListItem from "./PostListItem";
 
-const PostsList = ({data}) => {
-    console.log(data);
+const PostsList = ({ postData }) => {
   return (
-    <div>PostsList</div>
-  )
-}
+    <div>
+      <h1>PostsList</h1>
+      <PostListItem testData={postData} />
+    </div>
+  );
+};
 
-export default PostsList
+export default PostsList;
