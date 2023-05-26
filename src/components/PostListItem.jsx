@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import "./PostListItem.css";
 
-const PostListItem = (props) => {
-  console.log(props.testData);
+const PostListItem = ({ testData }) => {
+  //const handleEdit = (e) => {
 
+  //const editedPost ={title, body};
+  //     axios
+  //       .put(url, value)
+  //       .then(function (response) {
+  //         setPosts(response);
+  //       })
   return (
-    <div>
-      <h1>PostListItem</h1>
-      {props.testData.map((post) => {
-        <h2>{post.title}</h2>;
-      })}
-    </div>
+    //get rid of the classNames later
+    <>
+      <div className="list-items">
+        <h2 className="d1">{testData.title}</h2>
+        <p className="d2">{testData.body}</p>
+        <p className="d3">{testData.userId}</p>
+      </div>
+    </>
   );
 };
 
