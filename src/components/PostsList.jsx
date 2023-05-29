@@ -1,13 +1,18 @@
-import PostListItem from "./PostListItem";
-import "./PostList.css";
+import React from 'react'
+import PostListItem from './PostListItem';
 
-const PostsList = ({ postData }) => {
-  // console.log(postData.data);
+const PostsList = ({ posts, onUpdatePost, onDeletePost }) => {
   return (
-    <div className="card-container">
-      {postData?.data?.map((post) => (
-        <div key={post.id}>
-          <PostListItem testData={post} />
+    <div>
+      {posts.map(post => (
+        <div>
+          <h2>{post.id}</h2>
+          <PostListItem
+            key={post.id}
+            post={post}
+            onUpdatePost={onUpdatePost}
+            onDeletePost={onDeletePost}
+          />
         </div>
       ))}
     </div>
