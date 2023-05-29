@@ -19,4 +19,4 @@ const PostsList = ({ posts, onUpdatePost, onDeletePost }) => {
   );
 };
 
-export default PostsList
+export default PostsList;

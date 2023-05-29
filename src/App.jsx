@@ -5,8 +5,10 @@ import axios from "axios";
 import PostsList from './components/PostsList';
 import Form from './components/Form';
 
+
 const App = () => {
   const [posts, setPosts] = useState([]);
+
   const url ="https://jsonplaceholder.typicode.com/posts";
 
   useEffect(() => {
@@ -67,4 +69,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
